@@ -15,7 +15,7 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class CartPage extends PageObject {
+public class MicrosoftCartPage extends PageObject {
     @FindAll({@FindBy(xpath = "//span[@itemprop = 'price']")})
     private List<WebElement> priceList;
 
@@ -25,7 +25,7 @@ public class CartPage extends PageObject {
 
     WebDriverWait wait = new WebDriverWait(driver, 10);
 
-    public CartPage(WebDriver driver) {
+    public MicrosoftCartPage(WebDriver driver) {
         super(driver);
     }
 

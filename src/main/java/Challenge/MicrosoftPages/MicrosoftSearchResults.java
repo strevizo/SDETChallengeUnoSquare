@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
-public class SearchResults extends PageObject {
+public class MicrosoftSearchResults extends PageObject {
     @FindBy(xpath = "//span[@itemprop=\"price\"]")
     private List<WebElement> priceList;
 
     @FindBy(id = "R1MarketRedirect-close")
     private WebElement stayOnUSA;
 
-    public SearchResults(WebDriver driver) {
+    public MicrosoftSearchResults(WebDriver driver) {
         super(driver);
     }
 

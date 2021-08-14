@@ -2,6 +2,7 @@ package Challenge.MicrosoftPages;
 
 import Challenge.PageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class HomePage extends PageObject {
+public class MicrosoftHomePage extends PageObject {
 
     @FindBy(className = "js-paddle-items")
     private WebElement menuBar;
@@ -21,7 +22,8 @@ public class HomePage extends PageObject {
     @FindBy(id = "shellmenu_2")
     private WebElement windowsLink;
 
-    public HomePage(WebDriver driver) {
+
+    public MicrosoftHomePage(WebDriver driver) {
         super(driver);
         driver.get("https://www.microsoft.com/en-us");
     }

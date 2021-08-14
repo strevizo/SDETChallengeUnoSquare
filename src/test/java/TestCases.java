@@ -1,3 +1,4 @@
+import Challenge.APICalls;
 import Challenge.AmazonPages.AmazonEchoSupport;
 import Challenge.AmazonPages.AmazonHelpPage;
 import Challenge.AmazonPages.AmazonMainPage;
@@ -7,6 +8,7 @@ import Challenge.SDETChallenge;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.text.ParseException;
 
 
@@ -14,11 +16,11 @@ public class TestCases extends SDETChallenge {
 
     @Test
     public void TestCase1() throws InterruptedException, ParseException {
-        HomePage hp = new HomePage(driver);
-        WindowsPage wp = new WindowsPage(driver);
-        SearchResults sr = new SearchResults(driver);
-        VSProfessional vs = new VSProfessional(driver);
-        CartPage cp = new CartPage(driver);
+        MicrosoftHomePage hp = new MicrosoftHomePage(driver);
+        MicrosoftWindowsPage wp = new MicrosoftWindowsPage(driver);
+        MicrosoftSearchResults sr = new MicrosoftSearchResults(driver);
+        MicrosoftVSProfessional vs = new MicrosoftVSProfessional(driver);
+        MicrosoftCartPage cp = new MicrosoftCartPage(driver);
         String price;
 
         //Verify page has loaded
@@ -39,7 +41,7 @@ public class TestCases extends SDETChallenge {
         Assert.assertTrue(sr.printPrices(), "8 Print the price of the first 3 elements");
         price = sr.getPrice(0);
         Assert.assertTrue(!price.equals(""), "9 Store the price of the first one" );
-        Assert.assertTrue(sr.clickItem(0), "10 Click on teh first result");
+        Assert.assertTrue(sr.clickItem(0), "10 Click on the first result");
 
         //We are now in the Visual Studio page
         Assert.assertTrue(vs.comparePrices(price), "11 Validate both prices are the same");
@@ -52,15 +54,16 @@ public class TestCases extends SDETChallenge {
     }
 
     @Test
-    public void TestCase2() {
+    public void TestCase2() throws IOException, org.json.simple.parser.ParseException {
         AmazonMainPage mp = new AmazonMainPage(driver);
         AmazonSignUpPage sp = new AmazonSignUpPage(driver);
         AmazonHelpPage hp = new AmazonHelpPage(driver);
         AmazonEchoSupport es = new AmazonEchoSupport(driver);
+        APICalls ac = new APICalls();
 
         mp.clickStartHere();
-        sp.enterCustomerName("Pedro Picapiedra");
-        sp.enterCustomerEmail("Pedro.Picapiedra@rock.com");
+        sp.enterCustomerName(ac.getName());
+        sp.enterCustomerEmail(ac.getEmail());
         sp.clickConditionsOfUse();
         hp.searchHelp("Echo");
         hp.clickEchoSupportLink();

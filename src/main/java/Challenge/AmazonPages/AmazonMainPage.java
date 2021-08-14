@@ -1,5 +1,6 @@
 package Challenge.AmazonPages;
 
+import Challenge.HomePage;
 import Challenge.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AmazonMainPage extends PageObject {
+public class AmazonMainPage extends PageObject implements HomePage {
     @FindBy(id = "nav-link-accountList")
     private WebElement signContainer;
 
@@ -40,5 +41,11 @@ public class AmazonMainPage extends PageObject {
         //actions.click().build().perform();
 
         startHereLink.click();
+    }
+
+    @Override
+    public boolean search(String s) {
+        //Search code goes here to implement HomePage Interface
+        return true;
     }
 }

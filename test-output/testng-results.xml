@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="43969" started-at="2021-08-14T01:40:10 CDT" finished-at="2021-08-14T01:40:54 CDT">
+  <suite name="Default Suite" duration-ms="53952" started-at="2021-08-14T15:13:09 CDT" finished-at="2021-08-14T15:14:03 CDT">
     <groups>
     </groups>
-    <test name="SDTEChallenge" duration-ms="43969" started-at="2021-08-14T01:40:10 CDT" finished-at="2021-08-14T01:40:54 CDT">
+    <test name="SDTEChallenge" duration-ms="53952" started-at="2021-08-14T15:13:09 CDT" finished-at="2021-08-14T15:14:03 CDT">
       <class name="TestCases">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:TestCases@553f17c]" name="setUp" is-config="true" duration-ms="6402" started-at="2021-08-14T01:40:10 CDT" finished-at="2021-08-14T01:40:17 CDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TestCases@3fee9989]" name="setUp" is-config="true" duration-ms="4774" started-at="2021-08-14T15:13:09 CDT" finished-at="2021-08-14T15:13:13 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TestCase1()[pri:0, instance:TestCases@553f17c]" name="TestCase1" duration-ms="36729" started-at="2021-08-14T01:40:17 CDT" finished-at="2021-08-14T01:40:53 CDT">
+        <test-method status="PASS" signature="TestCase1()[pri:0, instance:TestCases@3fee9989]" name="TestCase1" duration-ms="35996" started-at="2021-08-14T15:13:13 CDT" finished-at="2021-08-14T15:13:49 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase1 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestCases@553f17c]" name="tearDown" is-config="true" duration-ms="779" started-at="2021-08-14T01:40:53 CDT" finished-at="2021-08-14T01:40:54 CDT">
+        <test-method status="PASS" signature="TestCase2()[pri:0, instance:TestCases@3fee9989]" name="TestCase2" duration-ms="12836" started-at="2021-08-14T15:13:49 CDT" finished-at="2021-08-14T15:14:02 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestCases@3fee9989]" name="tearDown" is-config="true" duration-ms="279" started-at="2021-08-14T15:14:02 CDT" finished-at="2021-08-14T15:14:03 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -12,11 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageObject {
     protected WebDriver driver;
-    @FindBy(id = "search")
-    WebElement searchButton;
-
-    @FindBy(id = "cli_shellHeaderSearchInput")
-    WebElement searchField;
 
     public WebDriverWait wait;
 
@@ -25,26 +20,4 @@ public class PageObject {
         PageFactory.initElements(driver, this);
     }
 
-    public boolean clickSearch(){
-        try{
-            searchButton.click();
-        } catch (Exception e){
-            System.out.println("Could not click search button");
-            return false;
-        }
-        return true;
-    }
-
-    public boolean search(String s){
-        try {
-            searchButton.click();
-            searchField.click();
-            searchField.sendKeys(s);
-            searchField.sendKeys(Keys.RETURN);
-        } catch(Exception e){
-            System.out.println("Could not search for " + s);
-            return false;
-        }
-        return true;
-    }
 }

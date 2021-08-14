@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 
-public class VSProfessional extends PageObject {
+public class MicrosoftVSProfessional extends PageObject {
     private WebElement addToCartButton;
 
-    public VSProfessional(WebDriver driver) {
+    public MicrosoftVSProfessional(WebDriver driver) {
         super(driver);
     }
 
