@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="43969" started-at="2021-08-14T01:40:10 CDT" finished-at="2021-08-14T01:40:54 CDT">
+    <groups>
+    </groups>
+    <test name="SDTEChallenge" duration-ms="43969" started-at="2021-08-14T01:40:10 CDT" finished-at="2021-08-14T01:40:54 CDT">
+      <class name="TestCases">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TestCases@553f17c]" name="setUp" is-config="true" duration-ms="6402" started-at="2021-08-14T01:40:10 CDT" finished-at="2021-08-14T01:40:17 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TestCase1()[pri:0, instance:TestCases@553f17c]" name="TestCase1" duration-ms="36729" started-at="2021-08-14T01:40:17 CDT" finished-at="2021-08-14T01:40:53 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestCases@553f17c]" name="tearDown" is-config="true" duration-ms="779" started-at="2021-08-14T01:40:53 CDT" finished-at="2021-08-14T01:40:54 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases -->
+    </test> <!-- SDTEChallenge -->
+  </suite> <!-- Default Suite -->
+</testng-results>
