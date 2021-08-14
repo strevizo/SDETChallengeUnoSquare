@@ -1,3 +1,7 @@
+import Challenge.AmazonPages.AmazonEchoSupport;
+import Challenge.AmazonPages.AmazonHelpPage;
+import Challenge.AmazonPages.AmazonMainPage;
+import Challenge.AmazonPages.AmazonSignUpPage;
 import Challenge.MicrosoftPages.*;
 import Challenge.SDETChallenge;
 import org.testng.Assert;
@@ -47,4 +51,21 @@ public class TestCases extends SDETChallenge {
         Assert.assertTrue(cp.validateQuantityChange(), "14 Select 20 and verify the amounts are correct");
     }
 
+    @Test
+    public void TestCase2() {
+        AmazonMainPage mp = new AmazonMainPage(driver);
+        AmazonSignUpPage sp = new AmazonSignUpPage(driver);
+        AmazonHelpPage hp = new AmazonHelpPage(driver);
+        AmazonEchoSupport es = new AmazonEchoSupport(driver);
+
+        mp.clickStartHere();
+        sp.enterCustomerName("Pedro Picapiedra");
+        sp.enterCustomerEmail("Pedro.Picapiedra@rock.com");
+        sp.clickConditionsOfUse();
+        hp.searchHelp("Echo");
+        hp.clickEchoSupportLink();
+        es.displayMainSupportLinks();
+    }
 }
+
+
